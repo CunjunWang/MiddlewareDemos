@@ -1,0 +1,40 @@
+Last login: Mon Sep 10 12:54:55 on ttys002
+wangcunjundeMacBook-Pro:~ CunjunWang$ cd /usr/local/C
+-bash: cd: /usr/local/C: No such file or directory
+wangcunjundeMacBook-Pro:~ CunjunWang$ cd /usr/local/
+wangcunjundeMacBook-Pro:local CunjunWang$ ls
+Caskroom			git				opt
+Cellar				include				redis
+Frameworks			lib				remotedesktop
+Homebrew			man				sbin
+bin				mysql				share
+etc				mysql-5.7.15-osx10.11-x86_64	var
+wangcunjundeMacBook-Pro:local CunjunWang$ cd Cellar
+wangcunjundeMacBook-Pro:Cellar CunjunWang$ ls
+autoconf	flow		heroku		libffi		libyaml		openssl		sqlite
+automake	freeglut	heroku-node	libgit2		llvm37-julia	openssl@1.1	telnet
+bash-completion	gcc		highlight	libgpg-error	lua		pcre		watchman
+boost		gdbm		icu4c		libksba		maven		pcre2		xz
+cmake		git		isl		libmpc		mbedtls		pkg-config	yarn
+coreutils	gmp		kafka		libssh2		mpfr		python		zookeeper
+fftw		gradle		libev		libtool		node		readline
+wangcunjundeMacBook-Pro:Cellar CunjunWang$ cd Kakfa
+-bash: cd: Kakfa: No such file or directory
+wangcunjundeMacBook-Pro:Cellar CunjunWang$ cd Kafka
+wangcunjundeMacBook-Pro:Kafka CunjunWang$ cd 2.0.0
+wangcunjundeMacBook-Pro:2.0.0 CunjunWang$ ls
+INSTALL_RECEIPT.json		NOTICE				homebrew.mxcl.kafka.plist
+LICENSE				bin				libexec
+wangcunjundeMacBook-Pro:2.0.0 CunjunWang$ ./bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 3 --topic my-topic
+Created topic "my-topic".
+wangcunjundeMacBook-Pro:2.0.0 CunjunWang$ ./bin/kafka-topics --list --zookeeper localhost:2181
+my-topic
+wangcunjundeMacBook-Pro:2.0.0 CunjunWang$ ./bin/kafka-console-producer --broker-list localhost:9092 --topic my-topic
+>first message
+>second message
+>third message
+>fourth message
+>
+
+
+

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: myDemo2
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 9093
+feign:
+  hystrix:
+    enabled: true

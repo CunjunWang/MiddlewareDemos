@@ -1,0 +1,32 @@
+Last login: Mon Sep 10 12:56:49 on ttys003
+wangcunjundeMacBook-Pro:~ CunjunWang$ cd /usr/local/cellar/kafka/2.0.0
+wangcunjundeMacBook-Pro:2.0.0 CunjunWang$ ./bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic my-topic
+^[[A^[[D^CProcessed a total of 0 messages
+wangcunjundeMacBook-Pro:2.0.0 CunjunWang$ ./bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic my-topic --from-beginning
+first message
+second message
+^CProcessed a total of 2 messages
+wangcunjundeMacBook-Pro:2.0.0 CunjunWang$ ./bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic my-topic --from-beginning
+second message
+first message
+third message
+^CProcessed a total of 3 messages
+^[[AwangcunjundeMacBook-Pro:2.0.0 CunjunWang$ ./bin/kafka-console-consumer --bootstrap-server lhost:9092 --topic my-topic
+fourth message
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

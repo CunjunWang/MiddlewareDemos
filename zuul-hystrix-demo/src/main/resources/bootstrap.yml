@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: zuul-hystrix-demo
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+# 忽略全部服务敏感头(全部服务都可传递cookie)
+zuul:
+  routes:
+    demo-api:
+      path: /demo-api/**
+      serviceId: mydemo
+# 排除接口
+  ignored-patterns:
+    - /**/shouldNotAccessedByOthers
+server:
+  port: 9090
+myName: CunjunWang
